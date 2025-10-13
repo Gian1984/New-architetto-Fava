@@ -1,5 +1,5 @@
 <template>
-  <section class="max-w-7xl mx-auto p-6">
+  <section class="max-w-full mx-auto p-6">
     <component v-if="Comp" :is="Comp" />
     <p v-else class="text-black">Caricamento…</p>
   </section>

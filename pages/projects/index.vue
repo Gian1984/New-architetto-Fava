@@ -1,5 +1,5 @@
 <template>
-  <section class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-12">
+  <section class="mx-auto max-w-full px-4 py-10 sm:px-6 lg:px-12">
     <div class="mb-8 text-center">
       <h2 class="text-xl font-semibold tracking-tight text-gray-900 border-b border-black inline-block pb-2">
         PROGETTI

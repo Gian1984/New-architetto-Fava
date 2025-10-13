@@ -1,12 +1,12 @@
 <template>
   <div class="bg-white">
-    <section aria-labelledby="features-heading" class="mx-auto max-w-7xl pt-32 pb-12 sm:px-2 lg:px-8">
-      <div class="mx-auto max-w-7xl px-4 lg:max-w-none lg:px-0">
+    <section aria-labelledby="features-heading" class="mx-auto max-w-full pt-32 pb-12 sm:px-2 lg:px-8">
+      <div class="mx-auto max-w-full px-4 lg:max-w-none lg:px-0">
         <!-- Heading -->
-        <div class="max-w-7xl mx-auto border-b border-black">
+        <div class="max-w-full mx-auto border-b border-black">
           <h2
               id="features-heading"
-              class="text-xl text-left leading-10 mx-auto max-w-7xl pb-2 font-bold tracking-tight text-gray-400 sm:text-xl"
+              class="text-xl text-left leading-10 mx-auto max-w-full pb-2 font-medium tracking-tight text-gray-400 sm:text-xl"
           >
             ' CASA RIVOLI ' è su 100 IDEE PER RISTRUTTURARE, Luglio 2022
           </h2>
@@ -17,7 +17,7 @@
           <div class="mx-auto max-w-full py-12 sm:py-12">
             <div class="mx-auto max-w-2xl lg:max-w-none">
               <div class="max-w-3xl">
-                <p class="text-2xl font-bold tracking-tight text-gray-900 sm:text-2xl">55 m² luminosi e su misura</p>
+                <p class="text-2xl font-medium tracking-tight text-gray-900 sm:text-2xl">55 m² luminosi e su misura</p>
                 <p class="mt-4 text-gray-500">
                   Situato in un edificio anni ’60 multifamiliare, su due piani, con uso comune di giardino e posti auto,
                   l’appartamento è stato completamente riconfigurato puntando su praticità, durata, sostenibilità e con

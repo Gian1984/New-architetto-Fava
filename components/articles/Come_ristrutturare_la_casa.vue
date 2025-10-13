@@ -1,13 +1,13 @@
 <!-- components/articles/Come_ristrutturare_la_casa.vue -->
 <template>
   <div class="bg-white">
-    <section aria-labelledby="features-heading" class="mx-auto max-w-7xl pt-32 pb-12 sm:px-2 lg:px-8">
-      <div class="mx-auto max-w-7xl px-4 lg:max-w-none lg:px-0">
+    <section aria-labelledby="features-heading" class="mx-auto max-w-full pt-32 pb-12 sm:px-2 lg:px-8">
+      <div class="mx-auto max-w-full px-4 lg:max-w-none lg:px-0">
 
         <!-- Titolo -->
-        <div class="mx-auto max-w-7xl border-b border-black">
+        <div class="mx-auto max-w-full border-b border-black">
           <h2 id="features-heading"
-              class="text-xl text-left leading-10 mx-auto max-w-7xl pb-2 font-bold tracking-tight text-gray-400">
+              class="text-xl text-left leading-10 mx-auto max-w-7xl pb-2 font-medium tracking-tight text-gray-400">
             ' PAINT IT BLACK ' è su Come Ristrutturare La Casa, Marzo - Aprile 2024
           </h2>
         </div>
@@ -16,7 +16,7 @@
           <div class="mx-auto max-w-full py-12 sm:py-12">
             <div class="mx-auto max-w-2xl lg:max-w-none">
               <div class="max-w-3xl">
-                <p class="text-2xl font-bold tracking-tight text-gray-900">Rinascita in nero</p>
+                <p class="text-2xl font-medium tracking-tight text-gray-900">Rinascita in nero</p>
                 <p class="mt-4 text-gray-500">
                   La trasformazione di un bilocale a Viareggio in un open space dominato dal nero, con dettagli in legno
                   di rovere, un’opera di design su misura che ottimizza spazio e funzionalità
