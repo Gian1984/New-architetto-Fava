@@ -1,7 +1,7 @@
 <!-- components/articles/Come_ristrutturare_la_casa.vue -->
 <template>
   <div class="bg-white">
-    <section aria-labelledby="features-heading" class="mx-auto max-w-full pt-32 pb-12 sm:px-2 lg:px-8">
+    <div aria-labelledby="features-heading" class="mx-auto max-w-full pt-32 pb-12 sm:px-2 lg:px-8">
       <div class="mx-auto max-w-full px-4 lg:max-w-none lg:px-0">
 
         <!-- Titolo -->
@@ -117,7 +117,7 @@
         </div>
 
       </div>
-    </section>
+    </div>
   </div>
 </template>
 

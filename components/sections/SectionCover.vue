@@ -26,10 +26,10 @@ defineProps<{
                    max-w-sm md:max-w-xs lg:max-w-xs xl:max-w-xs"
           >
             <div class="bg-white/50 lg:ml-12 p-2">
-              <p v-if="pretitle" class="mt-2 text-sm lg:text-base text-black">{{ pretitle }}</p>
-              <p class="pt-1 text-base md:text-lg lg:text-xl text-gray-700 text-left">
+              <h2 v-if="pretitle" class="mt-2 text-sm lg:text-base text-black">{{ pretitle }}</h2>
+              <h2 class="pt-1 text-base md:text-lg lg:text-xl text-gray-700 text-left">
                 {{ title }}
-              </p>
+              </h2>
               <p v-if="text" class="mt-2 text-sm lg:text-base text-black">
                 {{ text }}
               </p>

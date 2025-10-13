@@ -1,14 +1,14 @@
 <template>
   <div class="bg-white mb-6">
-    <main class="pt-20 max-w-full mx-auto px-4 sm:pb-12 sm:px-6 lg:max-w-full lg:pt-24 lg:px-8">
+    <div class="pt-20 max-w-full mx-auto px-4 sm:pb-12 sm:px-6 lg:max-w-full lg:pt-24 lg:px-8">
       <div class="lg:grid lg:grid-cols-12 lg:auto-rows-min lg:gap-x-8">
         <!-- Titoli mobile -->
         <h1 class="mt-3 text-lg font-semibold text-gray-900 text-center lg:hidden">
           CASA NEL PARCO
         </h1>
-        <h3 class="text-base text-gray-900 text-center lg:hidden">
+        <h2 class="text-base text-gray-900 text-center lg:hidden">
           Rivalta di Torino (TO) - 2016
-        </h3>
+        </h2>
 
         <!-- Galleria -->
         <div class="lg:mt-0 lg:col-start-1 lg:col-span-8 lg:mr-32 lg:row-start-1 lg:row-span-3">
@@ -43,7 +43,7 @@
           </h2>
 
           <div class="mt-10">
-            <h2 class="text-lg font-medium text-gray-900 mt-10">Descrizione</h2>
+            <h3 class="text-lg font-medium text-gray-900 mt-10">Descrizione</h3>
             <div class="mt-4 prose prose-sm text-gray-600 max-w-none" v-html="product.description" />
           </div>
 
@@ -58,7 +58,7 @@
         </div>
 
       </div>
-    </main>
+    </div>
   </div>
 </template>
 

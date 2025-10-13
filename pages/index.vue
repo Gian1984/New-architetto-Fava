@@ -2,7 +2,7 @@
 <template>
   <!-- HERO -->
     <transition appear @before-enter="beforeEnter" @enter="enter">
-      <section id="home" class="relative min-h-screen">
+      <div id="home" class="relative min-h-screen">
         <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100" />
         <div class="mx-auto">
           <div class="relative shadow-xl sm:overflow-hidden min-h-screen">
@@ -19,9 +19,9 @@
             <!-- Overlay: bottom-right -->
             <div class="relative min-h-screen px-4 sm:px-6 lg:px-8">
               <div class="pt-10 sm:pt-14 flex justify-center">
-                <p class="text-center text-xl text-black lg:mb-10 py-20">
+                <h1 class="text-center text-xl text-black lg:mb-10 py-20">
                   ARCHITETTURA<span class="text-white">&</span>INTERIOR DESIGN
-                </p>
+                </h1>
               </div>
 
               <div
@@ -52,7 +52,7 @@
             <!-- /Overlay -->
           </div>
         </div>
-      </section>
+      </div>
     </transition>
 
     <!-- BLOCCHI COVER -->
@@ -89,7 +89,7 @@
     />
 
     <!-- TEAM -->
-    <section class="bg-white">
+    <div class="bg-white">
       <div class="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:px-12">
         <div class="space-y-12">
           <div class="space-y-5 mx-auto text-center max-w-7xl">
@@ -132,10 +132,10 @@
           </ul>
         </div>
       </div>
-    </section>
+    </div>
 
     <!-- PROGETTI -->
-    <section class="bg-white pb-5" id="progetti">
+    <div class="bg-white pb-5" id="progetti">
       <div class="max-w-7xl mx-auto py-12 px-4 sm:py-10 sm:px-6 lg:px-12">
         <div class="mx-auto py-3 text-center lg:py-3">
           <h2 class="max-w-full border-b border-black text-xl text-gray-700 sm:max-w-7xl mx-auto leading-10">PROGETTI</h2>
@@ -163,16 +163,16 @@
           </article>
         </div>
       </div>
-    </section>
+    </div>
 
     <!-- GALLERY -->
-    <section class="bg-white">
+    <div class="bg-white">
       <div class="max-w-7xl mx-auto py-12 text-center px-4 lg:py-12 sm:px-6 lg:px-12">
         <div class="space-y-4 sm:space-y-12">
           <h2 id="gallery" class="max-w-full border-b border-black text-xl text-gray-700 sm:max-w-7xl mx-auto leading-10">GALLERY</h2>
         </div>
       </div>
-    </section>
+    </div>
 
     <div class="bg-white relative overflow-hidden">
       <div class="gallery-wrap" style="background-image: url('/img/PRO_7711.jpg');">
@@ -185,7 +185,7 @@
     </div>
 
     <!-- PRESS -->
-    <section class="bg-white" id="press">
+    <div class="bg-white" id="press">
       <div class="mx-auto py-12 px-4 sm:px-6 lg:px-8 lg:py-12">
         <div>
           <div class="space-y-5 mx-auto text-center max-w-7xl sm:px-6 lg:px-12 px-4">
@@ -227,7 +227,7 @@
 
         </div>
       </div>
-    </section>
+    </div>
 
     <!-- CONTATTI -->
     <ContactForm id="formCont" />

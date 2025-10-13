@@ -1,11 +1,11 @@
 <template>
   <div class="bg-white mb-6">
-    <main class="pt-20 max-w-full mx-auto px-4 sm:pb-12 sm:px-6 lg:max-w-full lg:pt-24 lg:px-8">
+    <div class="pt-20 max-w-full mx-auto px-4 sm:pb-12 sm:px-6 lg:max-w-full lg:pt-24 lg:px-8">
       <div class="lg:grid lg:grid-cols-12 lg:auto-rows-min lg:gap-x-8">
 
         <!-- Titoli mobile -->
         <h1 class="mt-3 text-lg font-semibold text-gray-900 text-center lg:hidden">CASA GRAMSCI</h1>
-        <h3 class="text-base text-gray-900 text-center lg:hidden">Condove (TO) - 2022</h3>
+        <h2 class="text-base text-gray-900 text-center lg:hidden">Condove (TO) - 2022</h2>
 
         <!-- Galleria -->
         <div class="lg:mt-0 lg:col-start-1 lg:col-span-8 lg:mr-32 lg:row-start-1 lg:row-span-3">
@@ -38,32 +38,32 @@
 
           <div class="mt-10 space-y-10">
             <div>
-              <h2 class="text-lg font-medium text-gray-900">Descrizione</h2>
+              <h3 class="text-lg font-medium text-gray-900">Descrizione</h3>
               <div class="mt-4 prose prose-sm text-gray-600 max-w-none" v-html="product.description" />
             </div>
 
             <div>
-              <h2 class="text-lg font-medium text-gray-900">La boiserie a nastro</h2>
+              <h3 class="text-lg font-medium text-gray-900">La boiserie a nastro</h3>
               <div class="mt-4 prose prose-sm text-gray-600 max-w-none" v-html="product.description1" />
             </div>
 
             <div>
-              <h2 class="text-lg font-medium text-gray-900">Rovere “nordico”</h2>
+              <h3 class="text-lg font-medium text-gray-900">Rovere “nordico”</h3>
               <div class="mt-4 prose prose-sm text-gray-600 max-w-none" v-html="product.description2" />
             </div>
 
             <div>
-              <h2 class="text-lg font-medium text-gray-900">Pura versatilità</h2>
+              <h3 class="text-lg font-medium text-gray-900">Pura versatilità</h3>
               <div class="mt-4 prose prose-sm text-gray-600 max-w-none" v-html="product.description3" />
             </div>
 
             <div>
-              <h2 class="text-lg font-medium text-gray-900">Bagno con layout a zone</h2>
+              <h3 class="text-lg font-medium text-gray-900">Bagno con layout a zone</h3>
               <div class="mt-4 prose prose-sm text-gray-600 max-w-none" v-html="product.description4" />
             </div>
 
             <div>
-              <h2 class="text-lg font-medium text-gray-900">Complice la luce</h2>
+              <h3 class="text-lg font-medium text-gray-900">Complice la luce</h3>
               <div class="mt-4 prose prose-sm text-gray-600 max-w-none" v-html="product.description5" />
             </div>
           </div>
@@ -79,7 +79,7 @@
         </div>
 
       </div>
-    </main>
+    </div>
   </div>
 </template>
 

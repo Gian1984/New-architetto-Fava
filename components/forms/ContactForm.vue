@@ -1,6 +1,6 @@
 <!-- components/forms/ContactForm.vue -->
 <template>
-  <section :id="id" class="bg-white">
+  <div :id="id" class="bg-white">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-12 py-12 lg:py-16">
       <!-- titolo -->
       <div class="text-center">
@@ -123,7 +123,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <script setup lang="ts">
