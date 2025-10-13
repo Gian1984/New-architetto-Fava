@@ -6,7 +6,7 @@ const route = useRoute()
 
 const isHome = computed(() => route.path === '/')
 const isProjects = computed(() => route.path.startsWith('/projects'))
-const isPress = computed(() => route.path.toLowerCase().includes('press'))
+const isPress = computed(() => route.path.toLowerCase().includes('/articles'))
 
 const navigation = {
   social: [
@@ -93,11 +93,11 @@ function goHomeTop() {
         <!-- right side (desktop) -->
         <div class="hidden sm:ml-12 sm:flex sm:items-center sm:space-x-8">
           <template v-if="isHome">
-            <button class="border-transparent text-gray-700 hover:text-black inline-flex items-center pt-1 border-b-2 text-xs font-medium" @click="scrollToId('home')">home</button>
-            <button class="border-transparent text-gray-700 hover:text-black inline-flex items-center pt-1 border-b-2 text-xs font-medium" @click="scrollToId('profilo')">chi siamo</button>
-            <button class="border-transparent text-gray-700 hover:text-black inline-flex items-center pt-1 border-b-2 text-xs font-medium" @click="scrollToId('progetti')">progetti</button>
-            <button class="border-transparent text-gray-700 hover:text-black inline-flex items-center pt-1 border-b-2 text-xs font-medium" @click="scrollToId('press')">press</button>
-            <button class="border-transparent text-gray-700 hover:text-black inline-flex items-center pt-1 border-b-2 text-xs font-medium" @click="scrollToId('formCont')">contatti</button>
+            <button class="border-transparent text-black hover:text-gray-700 inline-flex items-center pt-1 border-b-2 text-xs font-medium" @click="scrollToId('home')">home</button>
+            <button class="border-transparent text-black hover:text-gray-700 inline-flex items-center pt-1 border-b-2 text-xs font-medium" @click="scrollToId('profilo')">chi siamo</button>
+            <button class="border-transparent text-black hover:text-gray-700 inline-flex items-center pt-1 border-b-2 text-xs font-medium" @click="scrollToId('progetti')">progetti</button>
+            <button class="border-transparent text-black hover:text-gray-700 inline-flex items-center pt-1 border-b-2 text-xs font-medium" @click="scrollToId('press')">press</button>
+            <button class="border-transparent text-black hover:text-gray-700 inline-flex items-center pt-1 border-b-2 text-xs font-medium" @click="scrollToId('formCont')">contatti</button>
           </template>
           <template v-else>
             <NuxtLink :to="isPress ? '/#press' : '/#progetti'" class="inline-flex items-center p-2 text-black hover:text-gray-500">
@@ -134,19 +134,19 @@ function goHomeTop() {
     <!-- mobile panel -->
     <DisclosurePanel class="sm:hidden">
       <div class="bg-white/75 shadow">
-        <button @click="scrollToId('home')" class="w-full text-gray-900 flex items-center gap-2 px-4 py-2 border-b">
+        <button @click="scrollToId('home')" class="w-full text-black flex items-center gap-2 px-4 py-2 border-b">
           <HomeIcon class="h-6 w-6" /> <span>home</span>
         </button>
-        <button @click="scrollToId('profilo')" class="w-full text-gray-900 flex items-center gap-2 px-4 py-2 border-b">
+        <button @click="scrollToId('profilo')" class="w-full text-black flex items-center gap-2 px-4 py-2 border-b">
           <UsersIcon class="h-6 w-6" /> <span>chi siamo</span>
         </button>
-        <button @click="scrollToId('progetti')" class="w-full text-gray-900 flex items-center gap-2 px-4 py-2 border-b">
+        <button @click="scrollToId('progetti')" class="w-full text-black flex items-center gap-2 px-4 py-2 border-b">
           <FolderOpenIcon class="h-6 w-6" /> <span>progetti</span>
         </button>
-        <button @click="scrollToId('press')" class="w-full text-gray-900 flex items-center gap-2 px-4 py-2 border-b">
+        <button @click="scrollToId('press')" class="w-full text-black flex items-center gap-2 px-4 py-2 border-b">
           <FolderOpenIcon class="h-6 w-6" /> <span>press</span>
         </button>
-        <button @click="scrollToId('formCont')" class="w-full text-gray-900 flex items-center gap-2 px-4 py-2">
+        <button @click="scrollToId('formCont')" class="w-full text-black flex items-center gap-2 px-4 py-2">
           <ChatBubbleLeftIcon class="h-6 w-6" /> <span>contatti</span>
         </button>
       </div>

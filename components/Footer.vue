@@ -15,7 +15,7 @@ const COMPANY_ADDRESS = 'Corso Turati 19/b, Torino'
 const COMPANY_EMAIL = 'info@favaclaudio.com'
 const COMPANY_PHONE = '+39 328 864 8607'
 const MAPS_URL = 'https://www.google.com/maps/search/?api=1&query=Corso+Turati+19%2Fb%2C+Torino'
-const WEBMASTER_NAME = 'WebMaster'
+const WEBMASTER_NAME = 'WebMaster Gianluca Tiengo'
 const WEBMASTER_URL = 'https://gianlucatiengo.com/'
 
 const social = {

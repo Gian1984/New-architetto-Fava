@@ -36,7 +36,7 @@ defineProps<{
               <div class="text-right">
                 <NuxtLink
                     :to="to"
-                    class="mt-6 mb-2 bg-white/70 hover:bg-gray-700 hover:text-white text-xs text-black font-bold py-1 px-2 rounded-full inline-flex items-center"
+                    class="mt-6 mb-2 bg-white/70 hover:bg-gray-700 hover:text-white text-xs text-black font-medium py-1 px-2 rounded-full inline-flex items-center opacity-50"
                 >
                   <span class="px-1 py-0.5">vai al progetto</span>
                   <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
