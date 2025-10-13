@@ -15,7 +15,6 @@
     "@googlemaps/markerclusterer": "^2.6.2",
     "@headlessui/vue": "^1.7.23",
     "@heroicons/vue": "^2.2.0",
-    "@nuxt/content": "^3.7.1",
     "@nuxt/image": "^1.11.0",
     "@nuxt/scripts": "^0.12.1",
     "@unhead/vue": "^2.0.19",
