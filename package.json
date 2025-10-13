@@ -17,6 +17,8 @@
     "@heroicons/vue": "^2.2.0",
     "@nuxt/image": "^1.11.0",
     "@nuxt/scripts": "^0.12.1",
+    "@nuxtjs/robots": "^5.5.5",
+    "@nuxtjs/sitemap": "^7.4.7",
     "@unhead/vue": "^2.0.19",
     "better-sqlite3": "^12.4.1",
     "gsap": "^3.13.0",

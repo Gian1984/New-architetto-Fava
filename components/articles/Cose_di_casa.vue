@@ -17,7 +17,7 @@
           <div class="mx-auto max-w-full py-12 sm:py-12">
             <div class="mx-auto max-w-2xl lg:max-w-none">
               <div class="max-w-3xl">
-                <h2 class="text-2xl font-medium tracking-tight text-gray-900 sm:text-2xl">55 m² luminosi e su misura</p>
+                <h2 class="text-2xl font-medium tracking-tight text-gray-900 sm:text-2xl">55 m² luminosi e su misura</h2>
                 <p class="mt-4 text-gray-500">
                   Situato in un edificio anni ’60 multifamiliare, su due piani, con uso comune di giardino e posti auto,
                   l’appartamento è stato completamente riconfigurato puntando su praticità, durata, sostenibilità e con

@@ -79,7 +79,7 @@
         img="/img/dante/PR_R0550 copy-min.webp"
         title="PROGETTI SU MISURA"
         text="Attraverso la ricerca di nuove forme, materiali e tecniche."
-        :to="`/projects/dante`"
+        :to="`/projects/project_dante`"
     />
     <SectionCover
         img="/img/foto-LORA.webp"
