@@ -6,17 +6,17 @@
 
         <!-- Titolo -->
         <div class="mx-auto max-w-full border-b border-black">
-          <h2 id="features-heading"
+          <h1 id="features-heading"
               class="text-xl text-left leading-10 mx-auto max-w-7xl pb-2 font-medium tracking-tight text-gray-400">
             ' PAINT IT BLACK ' è su Come Ristrutturare La Casa, Marzo - Aprile 2024
-          </h2>
+          </h1>
         </div>
 
         <div>
           <div class="mx-auto max-w-full py-12 sm:py-12">
             <div class="mx-auto max-w-2xl lg:max-w-none">
               <div class="max-w-3xl">
-                <p class="text-2xl font-medium tracking-tight text-gray-900">Rinascita in nero</p>
+                <h2 class="text-2xl font-medium tracking-tight text-gray-900">Rinascita in nero</h2>
                 <p class="mt-4 text-gray-500">
                   La trasformazione di un bilocale a Viareggio in un open space dominato dal nero, con dettagli in legno
                   di rovere, un’opera di design su misura che ottimizza spazio e funzionalità

@@ -4,12 +4,12 @@
       <div class="mx-auto max-w-full px-4 lg:max-w-none lg:px-0">
         <!-- Heading -->
         <div class="max-w-full mx-auto border-b border-black">
-          <h2
+          <h1
               id="features-heading"
               class="text-xl text-left leading-10 mx-auto max-w-full pb-2 font-medium tracking-tight text-gray-400 sm:text-xl"
           >
             ' CASA RIVOLI ' è su 100 IDEE PER RISTRUTTURARE, Luglio 2022
-          </h2>
+          </h1>
         </div>
 
         <!-- Content -->
@@ -17,7 +17,7 @@
           <div class="mx-auto max-w-full py-12 sm:py-12">
             <div class="mx-auto max-w-2xl lg:max-w-none">
               <div class="max-w-3xl">
-                <p class="text-2xl font-medium tracking-tight text-gray-900 sm:text-2xl">Il wellness a casa</p>
+                <h2 class="text-2xl font-medium tracking-tight text-gray-900 sm:text-2xl">Il wellness a casa</h2>
                 <p class="mt-4 text-gray-500">
                   Un viaggio nel mondo del <em>salus per aquam</em> alla ricerca delle soluzioni più idonee
                   all'area wellness connessa direttamente alla zona notte, per una rigenerazione totale.

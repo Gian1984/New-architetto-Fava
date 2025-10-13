@@ -5,7 +5,7 @@
 
         <!-- Titoli mobile -->
         <h1 class="mt-3 text-lg font-semibold text-gray-900 text-center lg:hidden">TORRE RINALDA</h1>
-        <h3 class="text-base text-gray-900 text-center lg:hidden">Lecce (LE) - 2023</h3>
+        <h2 class="text-base text-gray-900 text-center lg:hidden">Lecce (LE) - 2023</h2>
         <h3 class="text-base text-gray-900 text-center lg:hidden mt-2">International architecture competition</h3>
 
         <!-- Galleria -->

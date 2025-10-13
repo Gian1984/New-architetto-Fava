@@ -6,9 +6,9 @@
         <h1 class="mt-3 text-lg font-semibold text-gray-900 text-center lg:hidden">
           CENTRALE OPERATIVA TELECONTROL
         </h1>
-        <h3 class="text-base text-gray-900 text-center lg:hidden">
+        <h2 class="text-base text-gray-900 text-center lg:hidden">
           Rivoli (TO) - 2014
-        </h3>
+        </h2>
 
         <!-- Galleria -->
         <div class="lg:mt-0 lg:col-start-1 lg:col-span-8 lg:mr-32 lg:row-start-1 lg:row-span-3">
