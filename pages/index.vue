@@ -1,59 +1,61 @@
 <!-- pages/index.vue -->
 <template>
-  <!-- HERO -->
-    <transition appear @before-enter="beforeEnter" @enter="enter">
-      <div id="home" class="relative min-h-screen">
-        <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100" />
-        <div class="mx-auto">
-          <div class="relative shadow-xl sm:overflow-hidden min-h-screen">
-            <div class="absolute inset-0">
-              <img
-                  class="min-h-full w-full object-cover"
-                  src="/img/PaintIt/SantAmbrogio_21bis.webp"
-                  alt="il progetto degli spazi"
-                  loading="eager"
-                  decoding="async"
-              />
-            </div>
-
-            <!-- Overlay: bottom-right -->
-            <div class="relative min-h-screen px-4 sm:px-6 lg:px-8">
-              <div class="pt-10 sm:pt-14 flex justify-center">
-                <h1 class="text-center text-xl text-black lg:mb-10 py-20">
-                  ARCHITETTURA<span class="text-white">&</span>INTERIOR DESIGN
-                </h1>
+    <!-- HERO -->
+    <div id="home" class="relative min-h-screen">
+      <transition appear @before-enter="beforeEnter" @enter="enter">
+        <div class="one-child">
+          <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100" />
+          <div class="mx-auto">
+            <div class="relative shadow-xl sm:overflow-hidden min-h-screen">
+              <div class="absolute inset-0">
+                <img
+                    class="min-h-full w-full object-cover opacity-0"
+                    src="/img/PaintIt/SantAmbrogio_21bis.webp"
+                    alt="il progetto degli spazi"
+                    loading="eager"
+                />
               </div>
 
-              <div
-                  class="absolute bottom-6 right-4 sm:bottom-10 sm:right-10 max-w-sm md:max-w-xs lg:max-w-screen-sm xl:max-w-screen-sm w-[92%] sm:w-auto"
-              >
-                <div class="bg-white/50 p-2 lg:ml-12">
-                  <p class="pt-1 md:text-l lg:text-3xl text-grey-500 sm:max-w-3xl text-left font-medium">
-                    Progettiamo spazi su misura dalla forte identità, coniugando estetica ed esigenze del cliente
-                  </p>
-                  <div class="text-right">
-                    <button
-                        class="mt-2 md:mt-24 lg:mt-44 mb-2 bg-white ml-auto hover:bg-gray-700 hover:text-white text-sm sm:text-lg text-black font-medium py-1 px-2 rounded-full flex items-center opacity-50"
-                        @click="scrollToId('formCont')"
-                    >
-                      <span class="px-1 py-0.5">prenota la tua consulenza gratuita</span>
-                      <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                        <path
-                            fill-rule="evenodd"
-                            d="M10.293 15.707a1 1 0 010-1.414L13.586 11H4a1 1 0 110-2h9.586l-3.293-3.293a1 1 0 111.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z"
-                            clip-rule="evenodd"
-                        />
-                      </svg>
-                    </button>
+              <!-- Overlay: bottom-right -->
+              <div class="relative min-h-screen px-4 sm:px-6 lg:px-8">
+                <div class="pt-10 sm:pt-14 flex justify-center">
+                  <h1 class="text-center text-xl text-black lg:mb-10 py-20">
+                    ARCHITETTURA<span class="text-white">&</span>INTERIOR DESIGN
+                  </h1>
+                </div>
+
+                <div
+                    class="absolute bottom-6 right-4 sm:bottom-10 sm:right-10 max-w-sm md:max-w-xs lg:max-w-screen-sm xl:max-w-screen-sm w-[92%] sm:w-auto"
+                >
+                  <div class="bg-white/50 p-2 lg:ml-12">
+                    <p class="pt-1 md:text-l lg:text-3xl text-grey-500 sm:max-w-3xl text-left font-medium">
+                      Progettiamo spazi su misura dalla forte identità, coniugando estetica ed esigenze del cliente
+                    </p>
+                    <div class="text-right">
+                      <button
+                          class="mt-2 md:mt-24 lg:mt-44 mb-2 bg-white ml-auto hover:bg-gray-700 hover:text-white text-sm sm:text-lg text-black font-medium py-1 px-2 rounded-full flex items-center opacity-50"
+                          @click="scrollToId('formCont')"
+                      >
+                        <span class="px-1 py-0.5 uppercase">prenota la tua consulenza gratuita</span>
+                        <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                          <path
+                              fill-rule="evenodd"
+                              d="M10.293 15.707a1 1 0 010-1.414L13.586 11H4a1 1 0 110-2h9.586l-3.293-3.293a1 1 0 111.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z"
+                              clip-rule="evenodd"
+                          />
+                        </svg>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
+              <!-- /Overlay -->
             </div>
-            <!-- /Overlay -->
           </div>
         </div>
-      </div>
-    </transition>
+      </transition>
+    </div>
+
 
     <!-- BLOCCHI COVER -->
     <SectionCover
@@ -307,7 +309,7 @@ useHead({
 // ---------------------------------------------------------------------------
 
 // plugin injections
-const { $emailjs, $gsap } = useNuxtApp()
+const { $gsap } = useNuxtApp()
 const gsap = $gsap as any
 
 // registri
@@ -341,12 +343,44 @@ const team = ref<TeamMember[]>([
 
 // transizioni
 function beforeEnter(el: Element) {
+  // prima dell’entrata: nascondo tutto
   (el as HTMLElement).style.opacity = '0'
 }
+
 function enter(el: Element, done: () => void) {
-  if (import.meta.client && gsap?.to) gsap.to(el, { opacity: 1, duration: 1.2, onComplete: done })
-  else { (el as HTMLElement).style.opacity = '1'; done() }
+  if (!import.meta.client) {
+    (el as HTMLElement).style.opacity = '1'
+    done()
+    return
+  }
+
+  const img = (el as HTMLElement).querySelector('img')
+  const { $gsap } = useNuxtApp()
+  const gsap = $gsap as any
+
+  // l’immagine parte invisibile e leggermente zoomata
+  gsap.set(img, { opacity: 0, scale: 1.05, filter: 'blur(6px)' })
+
+  // appena caricata → animazione fluida
+  img?.addEventListener('load', () => {
+    gsap.to(img, {
+      opacity: 1,
+      scale: 1,
+      filter: 'blur(0px)',
+      duration: 2.5,
+      ease: 'power2.out'
+    })
+  })
+
+  // fade generale del blocco hero (titolo, pulsante ecc.)
+  gsap.to(el, {
+    opacity: 1,
+    duration: 1.5,
+    ease: 'power2.out',
+    onComplete: done
+  })
 }
+
 
 // helper
 function scrollToId(id: string) {
@@ -354,7 +388,12 @@ function scrollToId(id: string) {
 }
 </script>
 
+
 <style scoped>
+
+#home {
+  isolation: isolate; /* forza il contesto di stacking */
+}
 .spacing { padding-bottom: 20px; }
 .gallery-wrap { display:flex; flex-direction:row; width:100%; height:70vh; }
 .item { flex:1; height:100%; background-position:center; background-size:cover; transition:flex .8s ease; }

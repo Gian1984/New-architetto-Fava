@@ -154,7 +154,18 @@ function goHomeTop() {
                 :aria-controls="'mobile-menu'"
                 :aria-label="open ? 'chiudi menu' : 'apri menu'"
             >
-              <Bars3Icon v-if="!open" class="h-8 w-8" aria-hidden="true" />
+              <span class="sr-only">Open main menu</span>
+              <span v-if="!open" class="block h-8 w-8 focus:outline-none active:bg-transparent"  aria-hidden="true">
+              <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 64 64">
+                  <g id="Layer_47" data-name="Layer 47">
+                    <path d="M12,20.84H32a1.5,1.5,0,0,0,0-3H12A1.5,1.5,0,0,0,12,20.84Z"/>
+                    <path d="M53.5,32A1.5,1.5,0,0,0,52,30.5H12a1.5,1.5,0,0,0,0,3H52A1.5,1.5,0,0,0,53.5,32Z"/>
+                    <path d="M52,43.16H32a1.5,1.5,0,0,0,0,3H52A1.5,1.5,0,0,0,52,43.16Z"/>
+                  </g>
+              </svg>
+            </span>
               <XMarkIcon v-else class="h-6 w-6" aria-hidden="true" />
             </DisclosureButton>
 

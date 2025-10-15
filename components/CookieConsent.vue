@@ -71,12 +71,12 @@
   <button
       v-if="mounted && decision"
       @click="resetConsent"
-      class="fixed bottom-4 left-4 z-50 rounded-full bg-gray-800 p-3 shadow-lg ring-1 ring-black/10 hover:bg-gray-700"
+      class="fixed bottom-4 left-4 z-50 rounded-full bg-gray-800 p-1 shadow-lg ring-1 ring-black/10 hover:bg-gray-700"
       title="Modifica preferenze cookie"
       aria-label="Modifica preferenze cookie"
   >
     <!-- Cookie SVG -->
-    <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg class="h-8 w-8" width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 
       <g id="SVGRepo_bgCarrier" stroke-width="0"/>
 

@@ -16,7 +16,7 @@ export default defineNuxtConfig({
             emailjsServiceId: process.env.NUXT_PUBLIC_EMAILJS_SERVICE_ID,
             emailjsTemplateId: process.env.NUXT_PUBLIC_EMAILJS_TEMPLATE_ID,
             emailjsPublicKey: process.env.NUXT_PUBLIC_EMAILJS_PUBLIC_KEY,
-            siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://www.architettofava.it'
+            siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://www.favaclaudio.com/'
         }
     },
 
@@ -33,7 +33,7 @@ export default defineNuxtConfig({
     },
 
     site: {
-        url: 'https://www.architettofava.it'
+        url: 'https://www.favaclaudio.com/'
     },
 
     sitemap: {
@@ -44,8 +44,14 @@ export default defineNuxtConfig({
     },
 
     robots: {
-        rules: [{ UserAgent: '*', Allow: '/' }],
-        sitemap: 'https://www.architettofava.it/sitemap.xml'
+        sitemap: ['https://www.favaclaudio.com/sitemap.xml'],
+        groups: [
+            {
+                userAgent: '*',
+                allow: ['/']
+            }
+        ]
     }
+
 })
 
