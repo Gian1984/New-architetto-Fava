@@ -9,6 +9,10 @@
 import { ref, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import { getProjectBySlug, loadProjectComponent } from '~/utils/projectRegistry'
+import { useSeoMeta, useRuntimeConfig } from '#imports'
+const config = useRuntimeConfig()
+const siteUrl = config.public.siteUrl
+
 
 const route = useRoute()
 const slug = route.params.slug as string
@@ -16,6 +20,26 @@ const entry = getProjectBySlug(slug)
 
 if (!entry) {
   throw createError({ statusCode: 404, statusMessage: 'Project not found' })
+}
+
+if (entry) {
+  const absoluteOgImage = entry.seo?.ogImage?.startsWith('http')
+      ? entry.seo.ogImage
+      : `${siteUrl}${entry.seo?.ogImage || ''}`
+  const projectUrl = `${siteUrl}/projects/${slug}`
+
+  useSeoMeta({
+    title: entry.seo?.title || entry.title,
+    description: entry.seo?.description || '',
+    ogTitle: entry.seo?.title || entry.title,
+    ogDescription: entry.seo?.description || '',
+    ogImage: absoluteOgImage,
+    ogUrl: projectUrl,
+    twitterCard: 'summary_large_image',
+    twitterTitle: entry.seo?.title || entry.title,
+    twitterDescription: entry.seo?.description || '',
+    twitterImage: absoluteOgImage
+  })
 }
 
 // prepara script JSON-LD con tipi compatibili

@@ -242,11 +242,12 @@ import SectionCover from '~/components/sections/SectionCover.vue'
 import { publicProjects } from '~/utils/projectRegistry'
 import { publicArticles } from '~/utils/articleRegistry'
 import { useSeoMeta, useHead } from '#imports'
+import { useRuntimeConfig } from '#imports'
 
-// --- SEO HOME ---------------------------------------------------------------
+const config = useRuntimeConfig()
 const SITE_NAME = 'Claudio Fava Architetto'
-const SITE_URL  = 'https://www.favaclaudio.com'
-const OG_IMAGE  = '/img/PaintIt/SantAmbrogio_01b.webp'
+const SITE_URL  = config.public.siteUrl || 'https://www.favaclaudio.com'
+const OG_IMAGE  = `${SITE_URL}/img/PaintIt/SantAmbrogio_01b.webp`
 const SITE_DESC = 'Studio di architettura a Torino: progetti su misura tra interior design, ristrutturazioni, retail e concept.'
 
 useSeoMeta({
@@ -257,6 +258,8 @@ useSeoMeta({
   ogType: 'website',
   ogUrl: SITE_URL,
   ogImage: OG_IMAGE,
+  ogImageWidth: '1200',
+  ogImageHeight: '630',
   twitterCard: 'summary_large_image',
   twitterTitle: `${SITE_NAME} — Architettura & Interior Design`,
   twitterDescription: SITE_DESC,
