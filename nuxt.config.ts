@@ -36,10 +36,6 @@ export default defineNuxtConfig({
         '@nuxtjs/robots'
     ],
 
-    routeRules: {
-        '/privacy-policy': { redirect: '/privacyPolicy' }
-    },
-
     site: {
         url: 'https://www.favaclaudio.com/'
     },

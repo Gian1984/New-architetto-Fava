@@ -126,27 +126,48 @@
 </template>
 
 <script setup lang="ts">
-import { useSeoMeta, useHead } from '#imports'
+import { useSeoMeta, useHead, useRuntimeConfig } from '#imports'
 
+// Recupera URL del sito da runtimeConfig
+const config = useRuntimeConfig()
 const SITE_NAME = 'Claudio Fava Architetto'
-const SITE_URL  = 'https://www.favaclaudio.com'
+const SITE_URL = config.public.siteUrl || 'https://www.favaclaudio.com'
+const OG_IMAGE = `${SITE_URL}/img/PaintIt/SantAmbrogio_01b.webp`
+const PAGE_URL = `${SITE_URL}/privacy-policy`
+const PAGE_DESC = 'Informativa sulla privacy e sul trattamento dei dati personali ai sensi del GDPR (Regolamento UE 2016/679) per gli utenti del sito www.favaclaudio.com.'
 
+// ----------------------
+// SEO META TAGS
+// ----------------------
 useSeoMeta({
   title: `Privacy Policy — ${SITE_NAME}`,
-  description: 'Informativa sul trattamento dei dati personali (GDPR) per gli utenti del sito www.favaclaudio.com.',
+  description: PAGE_DESC,
   ogTitle: `Privacy Policy — ${SITE_NAME}`,
-  ogDescription: 'Informativa sul trattamento dei dati personali (GDPR) per gli utenti del sito www.favaclaudio.com.',
-  ogType: 'website',
-  ogUrl: `${SITE_URL}/privacy-policy`,
-  ogImage: '/img/PaintIt/SantAmbrogio_01b.webp',
+  ogDescription: PAGE_DESC,
+  ogType: 'article',
+  ogUrl: PAGE_URL,
+  ogImage: OG_IMAGE,
+  ogImageWidth: '1200',
+  ogImageHeight: '630',
   twitterCard: 'summary_large_image',
   twitterTitle: `Privacy Policy — ${SITE_NAME}`,
-  twitterDescription: 'Informativa sul trattamento dei dati personali (GDPR) per gli utenti del sito www.favaclaudio.com.',
+  twitterDescription: PAGE_DESC,
+  twitterImage: OG_IMAGE,
   robots: 'index, follow'
 })
 
+// ----------------------
+// HEAD TAGS & JSON-LD
+// ----------------------
 useHead({
-  link: [{ rel: 'canonical', href: `${SITE_URL}/privacy-policy` }],
+  link: [
+    { rel: 'canonical', href: PAGE_URL },
+    { rel: 'icon', href: '/favicon.ico' },
+    { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' }
+  ],
+  meta: [
+    { name: 'keywords', content: 'privacy policy, GDPR, protezione dati personali, architetto, Torino' }
+  ],
   script: [
     {
       type: 'application/ld+json',
@@ -154,12 +175,26 @@ useHead({
         '@context': 'https://schema.org',
         '@type': 'WebPage',
         name: 'Privacy Policy',
-        url: `${SITE_URL}/privacy-policy`,
+        url: PAGE_URL,
+        description: PAGE_DESC,
+        isPartOf: {
+          '@type': 'WebSite',
+          name: SITE_NAME,
+          url: SITE_URL
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: SITE_NAME,
+          logo: {
+            '@type': 'ImageObject',
+            url: `${SITE_URL}/img/logo_black.png`
+          }
+        },
         breadcrumb: {
           '@type': 'BreadcrumbList',
           itemListElement: [
             { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
-            { '@type': 'ListItem', position: 2, name: 'Privacy Policy', item: `${SITE_URL}/privacy-policy` }
+            { '@type': 'ListItem', position: 2, name: 'Privacy Policy', item: PAGE_URL }
           ]
         }
       })

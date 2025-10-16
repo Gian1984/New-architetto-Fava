@@ -8,6 +8,8 @@ const route = useRoute()
 const isHome = computed(() => route.path === '/')
 const isProjects = computed(() => route.path.startsWith('/projects'))
 const isPress = computed(() => route.path.toLowerCase().includes('/articles'))
+const isPrivacy = computed(() => route.path.toLowerCase().includes('/privacy-policy'))
+
 
 const navigation = {
   social: [
@@ -65,7 +67,7 @@ function goHomeTop() {
   </a>
 
   <header>
-    <Disclosure as="nav" class="bg-white/50 backdrop-blur shadow fixed z-50 w-full" v-slot="{ open }" aria-label="menu principale">
+    <Disclosure as="nav" class="bg-white/50 backdrop-blur shadow fixed z-50 w-full" v-slot="{ open }" aria-label="menu principale" id="menu-principale">
       <div class="mx-auto px-4 sm:px-6 lg:px-8">
         <!-- ADD: relative per poter centrare i social con absolute -->
         <div class="relative flex justify-between h-16">
@@ -136,13 +138,16 @@ function goHomeTop() {
               </a>
             </template>
             <template v-else>
-              <NuxtLink :to="isPress ? '/#press' : '/#progetti'"
-                        class="inline-flex items-center p-2 text-black hover:text-gray-500 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2"
-                        aria-label="torna indietro">
+              <NuxtLink
+                  :to="isPrivacy ? '/#home' : isPress ? '/#press' : '/#progetti'"
+                  class="inline-flex items-center p-2 text-black hover:text-gray-500 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2"
+                  aria-label="torna indietro"
+              >
                 <ArrowLeftIcon class="h-6 w-6" aria-hidden="true" />
                 <span class="sr-only">indietro</span>
               </NuxtLink>
             </template>
+
           </div>
 
           <!-- mobile menu button -->
@@ -171,7 +176,7 @@ function goHomeTop() {
 
             <NuxtLink
                 v-else
-                :to="isProjects ? '/#progetti' : isPress ? '/#press' : '/#progetti'"
+                :to="isPrivacy ? '/#home' : isPress ? '/#press' : '/#progetti'"
                 class="inline-flex items-center justify-center p-2 rounded-md text-black hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-black"
                 aria-label="torna indietro"
             >

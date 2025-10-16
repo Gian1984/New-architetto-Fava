@@ -5,7 +5,18 @@ import {defineComponent, h} from "vue";
 const currentYear = new Date().getFullYear()
 
 function scrollTop() {
-  if (process.client) document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' })
+  if (!process.client) return
+
+  // tenta di scorrere verso l'header principale (navbar)
+  const header = document.getElementById('menu-principale')
+
+  if (header) {
+    header.scrollIntoView({ behavior: 'smooth' })
+    return
+  }
+
+  // altrimenti, scrolla direttamente in cima alla pagina
+  window.scrollTo({ top: 0, behavior: 'smooth' })
 }
 
 // --- DATI HARD-CODED ---

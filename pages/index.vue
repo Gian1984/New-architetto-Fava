@@ -1,7 +1,7 @@
 <!-- pages/index.vue -->
 <template>
     <!-- HERO -->
-    <div id="home" class="relative min-h-screen">
+    <div id="home" class="relative min-h-screen bg-white">
       <transition appear @before-enter="beforeEnter" @enter="enter">
         <div class="one-child">
           <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100" />
@@ -9,10 +9,11 @@
             <div class="relative shadow-xl sm:overflow-hidden min-h-screen">
               <div class="absolute inset-0">
                 <img
-                    class="min-h-full w-full object-cover opacity-0"
+                    class="w-full h-full object-cover"
                     src="/img/PaintIt/SantAmbrogio_21bis.webp"
-                    alt="il progetto degli spazi"
+                    alt="Progetto Paint It Black"
                     loading="eager"
+                    decoding="async"
                 />
               </div>
 
@@ -351,31 +352,33 @@ function beforeEnter(el: Element) {
 }
 
 function enter(el: Element, done: () => void) {
-  if (!import.meta.client) {
-    (el as HTMLElement).style.opacity = '1'
-    done()
-    return
-  }
-
   const img = (el as HTMLElement).querySelector('img')
-  const { $gsap } = useNuxtApp()
   const gsap = $gsap as any
 
-  // l’immagine parte invisibile e leggermente zoomata
   gsap.set(img, { opacity: 0, scale: 1.05, filter: 'blur(6px)' })
 
-  // appena caricata → animazione fluida
-  img?.addEventListener('load', () => {
+  // ✅ Se è già caricata, mostra subito
+  if (img?.complete) {
     gsap.to(img, {
       opacity: 1,
       scale: 1,
       filter: 'blur(0px)',
-      duration: 2.5,
+      duration: 1.5,
       ease: 'power2.out'
     })
-  })
+  } else {
+    img?.addEventListener('load', () => {
+      gsap.to(img, {
+        opacity: 1,
+        scale: 1,
+        filter: 'blur(0px)',
+        duration: 1.5,
+        ease: 'power2.out'
+      })
+    })
+  }
 
-  // fade generale del blocco hero (titolo, pulsante ecc.)
+  // Fade del blocco hero
   gsap.to(el, {
     opacity: 1,
     duration: 1.5,
@@ -383,6 +386,7 @@ function enter(el: Element, done: () => void) {
     onComplete: done
   })
 }
+
 
 
 // helper
